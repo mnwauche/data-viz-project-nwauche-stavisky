@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+    <head>
+        <meta charset='utf-8'>
+        <title>demo vis</title>
+        <script type='text/javascript' src='d3.js'></script>
+    </head>
+
+    <body>
+    <script type='text/javascript' src='visualizations.js'></script>
+    <script type='text/javascript'>
+        d3.csv('../data/team-offense-league-averages-per-team-game.csv')
+		  .then(function(data)  {
+               OffenseLeagueAveragesPerGame = data;
+               plot_it()
+		  });
+    </script>
+    </body>
+
+</html>
