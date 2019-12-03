@@ -1,0 +1,13 @@
+Tms -- Number of teams in the league this season
+Punt Returns
+    Ret -- Punts Returned
+    Yds -- Punts Return Yardage
+    TD -- Punts Returned for Touchdown
+    Y/R -- Yards per Punt Return
+Kick Returns
+    Rt -- Kickoff Returns
+    Yds -- Yardage for Kickoffs Returned
+    TD -- Kickoffs Returned for a touchdown
+    Y/Rt -- Yards per Kickoff Return - Kick Return Yardage/Kickoff Returns
+Total Yds
+    APYd -- All-purpose yards: Rushing, Receiving and Kick, Punt, Interception, and Fumble Return Yardage

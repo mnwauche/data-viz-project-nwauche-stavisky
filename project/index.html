@@ -10,11 +10,11 @@
     <body>
     <script type='text/javascript' src='visualizations.js'></script>
     <script type='text/javascript'>
-        d3.csv('../data/team-offense-league-averages-per-team-game.csv')
-		  .then(function(data)  {
-               OffenseLeagueAveragesPerGame = data;
-               plot_it()
-		  });
+        d3.json('data.json')
+		  .then(function(data){
+               var nfl_season_game_team_averages = data[0].values;
+               plot_it();
+		  })
     </script>
     </body>
 

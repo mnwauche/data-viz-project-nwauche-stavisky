@@ -1,0 +1,31 @@
+Rk -- Rank
+This is a count of the rows from top to bottom.
+It is recalculated following the sorting of a column.
+Tms -- Number of teams in the league this season
+0-19
+    FGA -- Field Goals Attempted, 19 yards and under
+    FGM -- Field Goals Made, 19 yards and under
+20-29
+    FGA -- Field Goals Attempted, 20-29 yards
+    FGM -- Field Goals Made, 20-29 yards
+30-39
+    FGA -- Field Goals Attempted, 30-39 yards
+    FGM -- Field Goals Made, 30-39 yards
+40-49
+    FGA -- Field Goals Attempted, 40-49 yards
+    FGM -- Field Goals Made, 40-49 yards
+50+
+    FGA -- Field Goals Attempted, 50+ yards
+    FGM -- Field Goals Made, 50+ yards
+Scoring
+    FGA -- Field Goals Attempted
+    FGM -- Total Field Goals Made
+    FG% -- Percentage of field goals made, 100*(FGM/FGA)
+    XPA -- Extra Points Attempted
+    XPM -- Extra Points Made
+    XP% -- Extra Point Percentage: (Extra Points Made)/(Extra Points Attempted)
+Punting
+    Pnt -- Times Punted
+    Yds -- Total Punt Yardage
+    Blck -- Times Punts Blocked
+    Y/P -- Yards per Punt

@@ -1,0 +1,26 @@
+Rk -- Rank
+This is a count of the rows from top to bottom.
+It is recalculated following the sorting of a column.
+Tms -- Number of teams in the league this season
+Rushing
+    Att -- Rushing Attempts (sacks not included in NFL)
+    Yds -- Rushing Yards Gained (sack yardage is not included by NFL)
+    TD -- Rushing Touchdowns
+    Y/A -- Rushing Yards per Attempt
+    Y/G -- Rushing Yards per Game: (Rushing Yards)/(Games Played)
+    A/G -- Rushing Attempts per Game: (Rushing Attempts)/(Games Played)
+Receiving
+    Rec -- Receptions
+    Yds -- Receiving Yards
+    Y/R -- Receiving Yards per Reception
+    TD -- Receiving Touchdowns
+    R/G -- Receptions per Game: (Receptions)/(Games Played)
+    Y/G -- Receiving Yards per Game: (Receiving Yards)/(Games Played)
+    Y/Tgt -- Receiving Yards per Target (target numbers since 1992)
+Total Yds
+    Touch -- Touches: Rushing Attempts and Receptions
+    Y/Tch -- Scrimmage yards per touch: Rushing + Receiving Yardage per opportunity
+    YScm -- Yards from Scrimmage: Receiving and Rushing Yards
+RRTD -- Rushing and Receiving Touchdowns
+Fumbles
+    Fmb -- Number of times fumbled both lost and recovered by own team. These represent ALL fumbles by the player on offense, defense, and special teams.

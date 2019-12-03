@@ -1,0 +1,20 @@
+Tms -- Number of teams in the league this season
+Passing
+    Cmp -- Passes completed
+    Att -- Passes attempted
+    Cmp% -- Percentage of Passes Completed
+    Yds -- Yards Gained by Passing. For teams, sack yardage is deducted from this total
+    TD -- Passing Touchdowns
+    TD% -- Percentage of Touchdowns Thrown when Attempting to Pass
+    Int -- Interceptions thrown
+    Int% -- Percentage of Times Intercepted when Attempting to Pass
+    Y/A -- Yards gained per pass attempt
+    AY/A -- Adjusted Yards gained per pass attempt: (Passing Yards + 20 * Passing TD - 45 * Interceptions) / (Passes Attempted)
+    Y/C -- Yards gained per pass completion (Passing Yards) / (Passes Completed)
+    Y/G -- Yards gained per game played
+    Rate -- Quarterback Rating, see glossary for details
+    Sk -- Times Sacked (first recorded in 1969, player per game since 1981)
+    Yds -- Yards lost due to sacks (first recorded in 1969, player per game since 1981)
+    NY/A -- Net Yards gained per pass attempt: (Passing Yards - Sack Yards) / (Passes Attempted + Times Sacked)
+    ANY/A -- Adjusted Net Yards per Pass Attempt: (Passing Yards - Sack Yards + (20 * Passing TD) - (45 * Interceptions)) / (Passes Attempted + Times Sacked)
+    Sk% -- Percentage of Time Sacked when Attempting to Pass: Times Sacked / (Passes Attempted + Times Sacked)

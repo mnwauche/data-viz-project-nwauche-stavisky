@@ -1,0 +1,14 @@
+Tms -- Number of teams in the league this season
+Offense
+    OthTD -- Other touchdowns from blocked kicks or missed field goals returned
+AllTD -- All touchdowns scored
+Scoring
+    2PM -- Two-Point Conversions Made
+2PA -- Two-Point Conversions attempted
+Scoring
+    XPM -- Extra Points Made
+    XPA -- Extra Points Attempted
+    FGM -- Total Field Goals Made
+    FGA -- Field Goals Attempted
+    Sfty -- Safeties scored by player/team
+    Pts -- Total points scored by all means
