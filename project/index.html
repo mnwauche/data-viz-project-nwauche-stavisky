@@ -11,10 +11,11 @@
     <script type='text/javascript' src='visualizations.js'></script>
     <script type='text/javascript'>
         d3.json('data.json')
-		  .then(function(data){
-               var nfl_season_game_team_averages = data[0].values;
-               plot_it();
-		  })
+		  .then(function(json){
+               data = json
+               nfl_season_game_team_averages = data[0];
+               plot_it()
+		})
     </script>
     </body>
 

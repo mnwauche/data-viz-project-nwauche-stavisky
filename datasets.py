@@ -26,11 +26,16 @@ def nfl_season_game_team_averages(data):
         print(f'\tReading from {dir1}')
 
         for key2 in key2_list[0:1]: # averages-per-team-game
-            datum_key2 = {'key2': key2, 'values': []}
+            datum_key2 = {'key2': key2, 'values': [], 'line_keys': []}
             fName = dir1 + key1 + '-league-' + key2 + '.csv'
             f = open(fName, newline='')
             lines = [line for line in f]
             size_line_0 = len(lines[0])
+
+            # add line_keys for line plot
+            line_keys = lines[1].split(',')
+            line_keys[-1] = line_keys[-1][:-2] # remove trailing '/r/n'
+            datum_key2['line_keys'] = line_keys
             f.close()
             f = open(fName, newline='')
             f.seek(size_line_0) # ignore first line of headers
@@ -38,10 +43,13 @@ def nfl_season_game_team_averages(data):
             values = [row for row in reader]
             datum_key2['values'] = values
             print(f'\t\tRead {len(values)} values from {fName}')
+
             datum_key1['values'].append(datum_key2)
+
         datum_key0['values'].append(datum_key1)
 
     data.append(datum_key0)
+    
     with open('project/data.json', 'w') as f_json:
         json.dump(data, f_json)
 
