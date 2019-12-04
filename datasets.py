@@ -19,7 +19,7 @@ def nfl_season_game_team_averages(data):
         'kick-and-punt-returns', 'kicking-and-punting']
     key2_list = ['averages-per-team-game', 'averages-per-team-season', 'totals']
 
-    for key1 in key1_list[0:1]: # TEST team-offense
+    for key1 in key1_list: # TEST team-offense
         datum_key1 = {'key1': key1, 'values': []}
         # team-offense => data/nfl-season-game-team-averages/nfl-season-by-season-team-offense/
         dir1 =  dir0 +'/nfl-season-by-season-' +key1+ '/'
