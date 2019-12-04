@@ -1,12 +1,13 @@
 function plot_it() {
     
-    var pad = 40, svgWidth = 1500, svgHeight = 2000
+    var pad = 40, svgWidth = 1800, svgHeight = 2000
+    var left_bar_width = 150
     d3.select('body').append('svg').attr('width', svgWidth).attr('height', svgHeight).attr('id', 'svg0')
 
     // history line plot
 
     history_width = 1000, history_height = 400;
-    var hist_plot_select = d3.select('#svg0').append('g').attr('transform', 'translate('+(pad)+','+(pad)+')').attr('id', 'history');
+    var hist_plot_select = d3.select('#svg0').append('g').attr('transform', 'translate('+(pad + left_bar_width + pad)+','+(pad)+')').attr('id', 'history');
     
     hist_plot_select.append('rect')
         .attr('x', 0).attr('y', 0)
@@ -44,7 +45,7 @@ function plot_it() {
     key1_map = {}
     key1_list = Array.from(new Set(line_data.map(datum => datum.key1)))
     key1_list.forEach((key1, i) => { key1_map[key1] = i})
-    h_scale = d3.scaleLinear().domain([0, key1_list.length - 1]).range([0, 360])
+    h_scale = d3.scaleLinear().domain([0, key1_list.length]).range([0, 360])
     var chroma = 60, lum = 50 // c => 0 - 120; l => 0 - 100
     var lines_select = hist_plot_select.selectAll('.lines').data(line_data).enter()
 
@@ -78,5 +79,15 @@ function plot_it() {
     hist_plot_select.select("#xaxis").selectAll("text")
         .attr("transform"," translate(-15,15) rotate(-65)") // To rotate the texts on x axis. Translate y position a little bit to prevent overlapping on axis line.
         .style("font-size","10px") //To change the font size of texts
+
+    var legend_scale = d3.scaleBand().domain(key1_list).range([160,0]).paddingInner(0.1);
+    var key1_legend_group = d3.select('#svg0').append('g').attr('transform', 'translate('+(pad+left_bar_width-150)+','+pad+')')
+    var key1_enter = key1_legend_group.selectAll('empty').data(key1_list).enter();
+    key1_enter.append('rect')
+        .attr('y', d => legend_scale(d)).attr('width', legend_scale.bandwidth()).attr('height', legend_scale.bandwidth())
+        .attr('fill', d => d3.hcl(h_scale(key1_map[d]),chroma,lum))
+    key1_enter.append('text')
+        .attr('x', (4+legend_scale.bandwidth())).attr('y', d => legend_scale(d) + legend_scale.bandwidth()/2)
+        .text(d => d).attr('alignment-baseline', 'middle')
 
 }
