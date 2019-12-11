@@ -19,7 +19,7 @@ function show_hover(line_data, line_scale_x, key1_legend_rects, height, mouse_pe
             })
 
         mpl_filtered.attr('transform',line => 'translate('+quantized_year_pos+', '+line.scale_y(line.values.find(elem => elem.keyYr == floor_yr).value)+')')
-        console.log(mpl_filtered.size())
+        //console.log(mpl_filtered.size())
 
         
         mpl_filtered.append('circle').attr('class', 'hovermark').attr('r', 7)
